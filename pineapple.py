@@ -10,6 +10,10 @@ def home():
 def profile():
     return render_template('ProfilePage.html')
 
+@app.route('/jobs/')
+def jobs():
+    return render_template('FeedPage.html')
+
 @app.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
