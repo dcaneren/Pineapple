@@ -1,5 +1,15 @@
 from flask import Flask, jsonify, abort, make_response, request, send_file, render_template, url_for, redirect
 
+class Job(object):
+    def __init__(self, position, location, skills, descrp):
+        self.position = position
+        self.location = location
+        self.skills = skills
+        self.descrp = descrp
+
+joblist = []
+
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -22,10 +32,12 @@ def createjob():
         skills = request.form.get("skills")
         descrp = request.form.get("descrp")
 
-        print(position)
-        print(location)
-        print(skills)
-        print(descrp)
+        joblist.append(Job(position, location, skills, descrp))
+        for obj in joblist:
+            print(obj.position)
+            print(obj.location)
+            print(obj.skills)
+            print(obj.descrp)
 
         return redirect(request.url)
 
