@@ -42,9 +42,8 @@
         <input type="text" placeholder="Search.." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-    <form>
-        <button id="basbana" name="basbana"><a href="{{url_for('comparison')}}" style="text-decoration: none;">Compare</a></button>
-    </form>
+    <button id="basbana" name="basbana" type="submit">Compare</button>
+    <button onclick="document.getElementById('id02').style.display='block'">Compare</button>
     <!--Grid-->
     <div class="w3-row-padding w3-padding-16 w3-center" id="food">
         {% for i in joblist %}
@@ -96,6 +95,16 @@
             </div>
         </div>
     </div>
+    <div id="id02" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <p>Proceed to comparison?</p>
+                <div style="text-align: center;"><button><a href="{{url_for('comparison')}}" style="text-decoration: none;"><b>Yes</b></a></button></div>
+                <br>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     // Used to toggle the menu on small screens when clicking on the menu button
@@ -115,7 +124,7 @@
         return checkedboxes;
     }
 
-    /*$(document).ready(function (e) {
+    $(document).ready(function (e) {
         $("#basbana").click(function () {
             var checkedboxes = document.querySelectorAll('input[name=checkboxn]:checked');
             var deneme = new Array();
@@ -139,7 +148,7 @@
                 }
             })
         })
-    });*/
+    });
 
 
 </script>

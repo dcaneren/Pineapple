@@ -45,6 +45,15 @@ def jobs():
         #comparedJob = request.form.getlist('checkboxn')
         #return render_template('Comparison.html', comparedJob=comparedJob)
         #return redirect(url_for('comparison'))
+        file1 = open("db.txt", "w")
+        for obj in comparedJobs:
+            file1.write(obj)
+            file1.write("\n")
+        #file1.write("Hello \n")
+        #file1.writelines(comparedJobs)
+        file1.close()
+        #file1 = open("db.txt", "r+")
+        #print("Output is ", file1.readline())
         return render_template('Comparison.html', comparedJob=comparedJob)
     else:
         return render_template('FeedPage.html', joblist=joblist)
@@ -55,7 +64,20 @@ def taketest():
 
 @app.route('/comparison/')
 def comparison():
-    return render_template('Comparison.html')
+    comparedjobs2 = []
+    file1 = open("db.txt", "r+")
+    for line in file1:
+        comparedJobs.append(line)
+    for obj in comparedJobs:
+        if obj == "Front-End Developer\n":
+            comparedjobs2.append(["Front-End Developer", "Softech", "Istanbul", "JavaScript, JQuery, CSS, HTML"])
+        if obj == "Back-End Developer\n":
+            comparedjobs2.append(["Back-End Developer", "İş Bankası", "İstanbul", "Python, MongoDB, SQL"])
+        if obj == "Product Manager\n":
+            comparedjobs2.append(["Product Manager", "Microsoft", "New York",
+                                  "MS office, JavaScript, HTML, MS project computer applications, Agile Methodologies"])
+
+    return render_template('Comparison.html', comparedjobs2=comparedjobs2)
 
 @app.route('/createjob/', methods=['GET','POST'] )
 def createjob():
