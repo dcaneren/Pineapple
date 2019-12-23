@@ -43,7 +43,7 @@
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
     <form>
-        <button id="basbana" formmethod="post"> bas buna</button>
+        <button id="basbana" name="basbana"><a href="{{url_for('comparison')}}" style="text-decoration: none;">Compare</a></button>
     </form>
     <!--Grid-->
     <div class="w3-row-padding w3-padding-16 w3-center" id="food">
@@ -115,28 +115,31 @@
         return checkedboxes;
     }
 
-    $(document).ready(function (e) {
+    /*$(document).ready(function (e) {
         $("#basbana").click(function () {
             var checkedboxes = document.querySelectorAll('input[name=checkboxn]:checked');
+            var deneme = new Array();
             for(i=0; i<checkedboxes.length; i++){
                 console.log(checkedboxes[i].id + "bu dönüyo");
+                deneme[i] = checkedboxes[i].id;
             }
-            var annen = JSON.stringify(checkedboxes[0].id)
-            console.log(annen)
-            console.log(checkedboxes + "kral naber");
+            var annen = JSON.stringify(checkedboxes)
+
             let anneninarrayi = Array.from(checkedboxes)
             console.log(anneninarrayi)
+
+            console.log(JSON.stringify(deneme) +" DENEME BU")
             $.ajax({
                 type: "POST",
-                url: "/comparison/",
-                data: JSON.stringify(anneninarrayi),
+                url: "/jobs/",
+                contentType: "application/json",
+                data: JSON.stringify(deneme),
                 success: function () {
                     console.log("wololo")
                 }
             })
         })
-
-    });
+    });*/
 
 
 </script>

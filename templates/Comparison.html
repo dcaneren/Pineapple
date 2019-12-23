@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
 
 table {
@@ -48,40 +48,45 @@ tr:nth-child(even) {
 <table>
   <tr>
     <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  {% for i in comparedJob %}
-  <tr>
-    <td>{{i}}</td>
-  </tr>
-  {% endfor %}
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+    <th>Position</th>
+    <th>Requirements</th>
+    <th>Location</th>
+    <th></th>
   </tr>
   <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
+    <td>Softech</td>
+    <td>Front-End Developer</td>
+    <td>JavaScript, JQuery, CSS, HTML</td>
+    <td>İstanbul</td>
+    <td><button onclick="document.getElementById('id01').style.display='block'">Apply</button></td>
   </tr>
   <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
+    <td>İş Bankası</td>
+    <td>Back-End Developer</td>
+    <td>Python, MongoDB, SQL</td>
+    <td>İstanbul</td>
+    <td><button onclick="document.getElementById('id01').style.display='block'">Apply</button></td>
   </tr>
   <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
+    <td>Kardeşler Pide & Kebap</td>
+    <td>Project Manager</td>
+    <td>MS office, JavaScript, HTML, MS project computer applications, Agile Methodologies</td>
+    <td>Konya</td>
+    <td><button onclick="document.getElementById('id01').style.display='block'">Apply</button></td>
   </tr>
 </table>
 
+<!-- The Modal -->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <p>Before applying for this job, you have to take a test.</p>
+                <p>Are you ready?</p>
+                <div style="text-align: center;"><button><a href="{{url_for('taketest')}}" style="text-decoration: none;"><b>Take the test</b></a></button></div>
+                <br>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

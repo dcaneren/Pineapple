@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, abort, make_response, request, send_file, render_template, url_for, redirect
+from flask import Flask, jsonify, abort, make_response, request, send_file, render_template, url_for, redirect, session
 import json
 
 class Job(object):
@@ -9,8 +9,9 @@ class Job(object):
         self.skills = skills
         self.descrp = descrp
 
+
 joblist = []
-comparedJob = []
+comparedJobs = []
 
 joblist.append(Job("Front-End Developer","Softech","Istanbul","JavaScript, JQuery, CSS, HTML","Full-time, Writing well designed, testable, efficient code by using best software development practices. " +
 "Creating website layout/user interfaces by using standard HTML/CSS practices, Integrating data from various back-end services and databases. "))
@@ -38,19 +39,22 @@ def profile():
 @app.route('/jobs/', methods=['GET', 'POST'])
 def jobs():
     if request.method == "POST":
-        comparedJob = request.data
+        comparedJob = request.get_json()
+        comparedJobs = comparedJob
+        session['comparedJob'] = comparedJob
+        #comparedJob = request.form.getlist('checkboxn')
+        #return render_template('Comparison.html', comparedJob=comparedJob)
+        #return redirect(url_for('comparison'))
         return render_template('Comparison.html', comparedJob=comparedJob)
-    return render_template('FeedPage.html', joblist=joblist)
+    else:
+        return render_template('FeedPage.html', joblist=joblist)
 
 @app.route('/taketest/')
 def taketest():
     return render_template('TestPage.html')
 
-@app.route('/comparison/', methods=['GET', 'POST'])
+@app.route('/comparison/')
 def comparison():
-    if request.method == "POST":
-        comparedJob = request.get_json()
-        return jsonify(result=comparedJob)
     return render_template('Comparison.html')
 
 @app.route('/createjob/', methods=['GET','POST'] )
@@ -78,4 +82,6 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 if __name__ == '__main__':
+    app.secret_key = 'super secret key'
+    app.config['SESSION_TYPE'] = 'filesystem'
     app.run(debug=True)
