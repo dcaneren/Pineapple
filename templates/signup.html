@@ -1,0 +1,120 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/fav.png') }}">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Pineapple</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/linearicons.css') }}">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		</head>
+		<body>
+
+			  <header id="header">
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="/"><h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pineapple</h3></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li><a href="about-us.html">About Us</a></li>
+				          <li><a href="contact.html">Contact</a></li>
+				          <li><a class="ticker-btn" href="/login">Login</a></li>
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-center">
+						<div class="banner-content col-lg-12">
+                            <div class="col-lg-8 col-md-8">
+								<h1 class="text-white">
+                                    Sign Up
+							    </h1>
+                                <br>
+								<form action="/signup" method="POST">
+									<div class="mt-10">
+										<input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
+									</div>
+									<div class="mt-10">
+										<input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+									</div>
+                                    <div class="mt-10">
+										<input type="text" name="job_title" placeholder="Job Title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Job Title'" required class="single-input">
+									</div>
+									<div class="mt-10">
+										<input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required class="single-input">
+									</div>
+									<div class="mt-10">
+										<input type="password" name="pwd" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" required class="single-input">
+									</div>
+									<div class="input-group-icon mt-10">
+										<div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+										<input type="text" name="location" placeholder="Location" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Location'" required class="single-input">
+									</div>
+									<!-- For Gradient Border Use -->
+									<!-- <div class="mt-10">
+										<div class="primary-input">
+											<input id="primary-input" type="text" name="first_name" placeholder="Primary color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'">
+											<label for="primary-input"></label>
+										</div>
+									</div> -->
+                                    <div class="mt-10">
+                                        <input type="submit" name="submit" class="genric-btn primary">
+                                        {% if feedback %}
+                                            <p class="text-danger float-right">{{ feedback }}</p>
+                                        {% endif %}
+                                    </div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+			<script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="{{ url_for('static', filename='js/easing.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/hoverIntent.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/superfish.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		</body>
+	</html>
