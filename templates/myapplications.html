@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/fav.png') }}">
+    <!-- Author Meta -->
+    <meta name="author" content="codepixer">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Pineapple</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/linearicons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo">
+                <a href="/"><h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pineapple</h3></a>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="/">Home</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/myapplications">My Applications</a></li>
+                    <li><a class="ticker-btn" href="/logout">Log Out</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </div>
+</header>
+<!-- #header -->
+
+<section class="banner-area relative" id="home">
+    <div class="overlay overlay-bg" style="height: 300px"></div>
+</section>
+
+
+<!-- Start post Area -->
+<section class="post-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center d-flex">
+
+            <div class="col-lg-8 post-list">
+                    <div class="single-post d-flex flex-row">
+                        <div class="details">
+                            <div class="title d-flex flex-row justify-content-between">
+                                <div class="titles">
+                                    <a href="single.html"><h4>{{application[0]}}</h4></a>
+                                    <h6>{{application[1]}}</h6>
+                                </div>
+                            </div>
+                            <p>
+                               {{application[4]}}
+                            </p>
+                            <p>
+                                {{application[3]}}
+                            </p>
+                            <h5>Job Type: {{application[1]}}</h5>
+                            <p class="address"><span class="lnr lnr-map"></span>&nbsp;{{application[5]}}</p>
+                            <p class="address"><span class="lnr lnr-database"></span>&nbsp;{{application[6]}}</p>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="single-slidebar">
+                    <h4>Jobs by Location</h4>
+                    <ul class="cat-list">
+                        <li><a class="justify-content-between d-flex" href="category.html"><p>Istanbul</p><span>37</span></a></li>
+                        <li><a class="justify-content-between d-flex" href="category.html"><p>New York</p><span>57</span></a></li>
+                        <li><a class="justify-content-between d-flex" href="category.html"><p>Berlin</p><span>33</span></a></li>
+                        <li><a class="justify-content-between d-flex" href="category.html"><p>Tokyo</p><span>36</span></a></li>
+                        <li><a class="justify-content-between d-flex" href="category.html"><p>Florida</p><span>47</span></a></li>
+                        <li><a class="justify-content-between d-flex" href="category.html"><p>Minneapolis</p><span>27</span></a></li>
+                        <li><a class="justify-content-between d-flex" href="category.html"><p>Chicago</p><span>17</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="single-slidebar">
+								<h4>Posted Lately</h4>
+								<div class="active-relatedjob-carusel">
+									<div class="single-rated">
+										<img class="img-fluid" src="img/r1.jpg" alt="">
+										<a href="single.html"><h4>Creative Art Designer</h4></a>
+										<h6>Premium Labels Limited</h6>
+										<p>
+											Senior Designer to work with Adobe products.
+										</p>
+										<h5>Full time</h5>
+										<p class="address"><span class="lnr lnr-map"></span> Paris, France</p>
+										<a href="#" class="btns text-uppercase">Apply</a>
+									</div>
+									<div class="single-rated">
+										<img class="img-fluid" src="img/r1.jpg" alt="">
+										<a href="single.html"><h4>Senior Software Engineer</h4></a>
+										<h6>Microsoft</h6>
+										<p>
+											Looking for a senior engineer experienced with embedded systems
+										</p>
+										<h5>Full time</h5>
+										<p class="address"><span class="lnr lnr-map"></span> Istanbul, Turkey</p>
+										<a href="#" class="btns text-uppercase">Apply</a>
+									</div>
+									<div class="single-rated">
+										<img class="img-fluid" src="img/r1.jpg" alt="">
+										<a href="single.html"><h4>Monster Hunter</h4></a>
+										<h6>Capcom</h6>
+										<p>
+											Looking for someone that can slay Behemoth with bare hands. Alone.
+										</p>
+										<h5>Intern</h5>
+										<p class="address"><span class="lnr lnr-map"></span> Pangea</p>
+										<a href="#" class="btns text-uppercase">Apply</a>
+									</div>
+								</div>
+							</div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End post Area -->
+
+
+
+<!-- start footer Area -->
+<footer class="footer-area section-gap" style="height: 100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                        <div class="col-lg-12" style="text-align: center">
+                            <i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-dribbble"></i><i class="fa fa-behance"></i>
+                        </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End footer Area -->
+
+
+<script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+<script src="{{ url_for('static', filename='js/easing.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/hoverIntent.js') }}"></script>
+<script src="{{ url_for('static', filename='js/superfish.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
+
+

@@ -101,6 +101,17 @@ def profile():
         return render_template('login.html')
     return render_template('profile.html')
 
+@app.route('/myapplications')
+def myapplications():
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    application = []
+    file1 = open("db.txt", "r+")
+    for line in file1:
+        application.append(line)
+
+    return render_template('myapplications.html',application=application)
+
 @app.route('/jobs')
 def jobs():
     if not session.get('logged_in'):
