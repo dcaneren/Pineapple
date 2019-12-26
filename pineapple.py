@@ -21,6 +21,10 @@ def elements():
     return render_template('elements.html')
 
 
+@app.route('/compare')
+def compare():
+    return render_template('compare.html')
+
 @app.route('/')
 def home():
     if not session.get('logged_in'):

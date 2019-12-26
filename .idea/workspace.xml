@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -27,6 +28,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -75,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577360490730</updated>
-      <workItem from="1577360492000" duration="3419000" />
+      <workItem from="1577360492000" duration="7260000" />
     </task>
     <servers />
   </component>
@@ -83,26 +85,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#Compass" timestamp="1577366042644">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Compass/0.0.1440.900@0.0.1440.900" timestamp="1577366042644" />
     <state x="320" y="115" key="#Web_Browsers" timestamp="1577360562825">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#Web_Browsers/0.0.1440.900@0.0.1440.900" timestamp="1577360562825" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1577360730393">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1577365077509">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1577360730393" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1577360730392">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1577365077509" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1577365077508">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1577360730392" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1577360730392">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1577365077508" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1577365077508">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1577360730392" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1577360730393">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1577365077508" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1577365077508">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1577360730393" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1577365077508" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1577360516790">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -113,6 +119,6 @@
     <state x="378" y="85" width="683" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1577360941875" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Pineapple$Pineapple.coverage" NAME="Pineapple Coverage Results" MODIFIED="1577360730380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pineapple$Pineapple.coverage" NAME="Pineapple Coverage Results" MODIFIED="1577365077500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
