@@ -15,6 +15,12 @@ comparedJobs = []
 
 app = Flask(__name__)
 
+
+@app.route('/elements')
+def elements():
+    return render_template('elements.html')
+
+
 @app.route('/')
 def home():
     if not session.get('logged_in'):
@@ -70,6 +76,10 @@ def logout():
 def profile():
     return render_template('profile.html')
 
+@app.route('/jobs')
+def jobs():
+    return render_template('jobs.html')
+
 # @app.route('/jobs/', methods=['GET', 'POST'])
 # def jobs():
 #     if request.method == "POST":
@@ -92,10 +102,10 @@ def profile():
 #     else:
 #         return render_template('FeedPage.html', joblist=joblist)
 #
-# @app.route('/taketest/')
-# def taketest():
-#     return render_template('TestPage.html')
-#
+@app.route('/taketest/')
+def taketest():
+   return render_template('testpage.html')
+
 # @app.route('/comparison/')
 # def comparison():
 #     comparedjobs2 = []
@@ -113,25 +123,25 @@ def profile():
 #
 #     return render_template('Comparison.html', comparedjobs2=comparedjobs2)
 #
-# @app.route('/createjob/', methods=['GET','POST'] )
-# def createjob():
-#     if request.method == "POST":
-#         position = request.form.get("Position")
-#         company = request.form.get("company")
-#         location = request.form.get("Location")
-#         skills = request.form.get("skills")
-#         descrp = request.form.get("descrp")
-#
-#         joblist.append(Job(position, company, location, skills, descrp))
-#         for obj in joblist:
-#             print(obj.position)
-#             print(obj.location)
-#             print(obj.skills)
-#             print(obj.descrp)
-#
-#         return redirect(request.url)
-#
-#     return render_template('CreateJob.html')
+@app.route('/createjob/', methods=['GET','POST'] )
+def createjob():
+     if request.method == "POST":
+         position = request.form.get("Position")
+         company = request.form.get("company")
+         location = request.form.get("Location")
+         skills = request.form.get("skills")
+         descrp = request.form.get("descrp")
+
+         joblist.append(Job(position, company, location, skills, descrp))
+         for obj in joblist:
+             print(obj.position)
+             print(obj.location)
+             print(obj.skills)
+             print(obj.descrp)
+
+         return redirect(request.url)
+
+     return render_template('CreateJob.html')
 
 @app.errorhandler(404)
 def not_found(error):
