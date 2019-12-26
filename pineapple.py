@@ -13,6 +13,16 @@ class Job(object):
 joblist = []
 comparedJobs = []
 
+joblist.append(Job("Front-End Developer","SoftTech","Istanbul","JavaScript, JQuery, CSS, HTML","Full-time, Writing well designed, testable, efficient code by using best software development practices. " +
+"Creating website layout/user interfaces by using standard HTML/CSS practices, Integrating data from various back-end services and databases. "))
+
+joblist.append(Job("Back-End Developer","İş Bankası","Istanbul","Python, MongoDB, SQL","Compile and analyze data, processes, and codes to troubleshoot problems and identify areas for improvement. " +
+"Collaborating with the front-end developers and other team members to establish objectives and design more functional, cohesive codes to enhance the user experience. " +
+"Developing ideas for new programs, products, or features by monitoring industry developments and trends. " +
+"Recording data and reporting it to proper parties, such as clients or leadership." ))
+
+joblist.append(Job("Kebab Chef","The Avenue Chippy","Calcot, England","Chef(1+ year experience)","We are looking for a trained kebab chef to join our friendly and vibrant new team in our new chip shop. Experience would be ideal, as it will be a fast paced environment."))
+
 app = Flask(__name__)
 
 
@@ -78,7 +88,7 @@ def profile():
 
 @app.route('/jobs')
 def jobs():
-    return render_template('jobs.html')
+    return render_template('jobs.html', joblist=joblist)
 
 @app.route('/createjob', methods=["GET", "POST"])
 def createjob():
@@ -97,7 +107,7 @@ def createjob():
             print(obj.skills)
             print(obj.descrp)
 
-        return redirect(url_for('jobs'))
+        return redirect(url_for('jobs'), joblist=joblist)
     return render_template('createjob.html')
 # @app.route('/jobs/', methods=['GET', 'POST'])
 # def jobs():
