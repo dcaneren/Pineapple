@@ -78,8 +78,8 @@
                                     <h6>{{i.company}}</h6>
                                 </div>
                                 <ul class="btns">
-                                    <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                                    <li><a href="#">Apply</a></li>
+                                    <li><a><input class="primary-checkbox" type="checkbox"></a></li>
+                                    <li><a data-toggle="modal" data-target="#exampleModal">Apply</a></li>
                                 </ul>
                             </div>
                             <p>
@@ -238,6 +238,26 @@
     </div>
 </footer>
 <!-- End footer Area -->
+
+<div class="modal" tabindex="-1" role="dialog" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Job Application</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>In order to apply to this job, you have to answer to the questions. Are you ready for the test?</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-primary"><a href="/taketest" style="color: white">Take me to the Test</a></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
