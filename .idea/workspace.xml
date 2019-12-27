@@ -78,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577360490730</updated>
       <workItem from="1577360492000" duration="8363000" />
+      <workItem from="1577433900177" duration="325000" />
     </task>
     <servers />
   </component>
@@ -113,12 +114,16 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1577360516790" />
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1577433900987">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1577433900987" />
     <state x="378" y="85" width="683" height="729" key="find.popup" timestamp="1577360941875">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="378" y="85" width="683" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1577360941875" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Pineapple$Pineapple.coverage" NAME="Pineapple Coverage Results" MODIFIED="1577365077500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pineapple$Pineapple.coverage" NAME="Pineapple Coverage Results" MODIFIED="1577434226856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
